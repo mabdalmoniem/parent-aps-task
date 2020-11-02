@@ -23,7 +23,7 @@ class UserController extends Controller
         $providers->each(function ($config, $provider_name) use (&$result, $request) {
             $provider = (new DataProvider)
                 ->setConfig($config)
-                ->setInitialData(DataProvider::fetchData($provider_name))
+                ->setInitialData(DataProvider::fetchData($config))
                 ->filterByStatus($request->get('status'))
                 ->filterByCurrency($request->get('currency'))
                 ->filterByAmount('>=', $request->get('balanceMin'))

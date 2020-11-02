@@ -3,6 +3,7 @@
 return [
     'DataProviderX' => [
         'enabled'   => true,
+        'database_path' => '/json/DataProviderX.json',
         'mappings'  => [
             'amount'    => 'parentAmount',
             'currency'  => 'Currency',
@@ -19,6 +20,7 @@ return [
     ],
     'DataProviderY' => [
         'enabled'   => true,
+        'database_path' => '/json/DataProviderY.json',
         'mappings' => [
             'amount'    => 'balance',
             'currency'  => 'currency',

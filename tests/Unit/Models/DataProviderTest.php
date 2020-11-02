@@ -20,7 +20,7 @@ class DataProviderTest extends TestCase
         $this->assertCount(0, $provider->getData());
 
         // act
-        $provider->setInitialData(DataProvider::fetchData('DataProviderX'));
+        $provider->setInitialData(DataProvider::fetchData(config('data-providers.DataProviderX')));
 
         // assert
         $this->greaterThan(0, $provider->getData());
