@@ -12,7 +12,9 @@
     - visit `/api/users/ to filter the result
     - allowed filters in the query string are (all are case insensitive):
         - currency
-        - status
+        - status (available values are: 'authorized', 'declined' & 'refunded')
         - balanceMin
         - balanceMax
     and they can be combined together
+
+    example: `http://you-server.test/api/users?currency=usd&status=declined&balanceMin=93`
